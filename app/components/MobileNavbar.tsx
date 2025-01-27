@@ -3,11 +3,10 @@ import logo from "@/app/assets/images/logo.png"
 import Image from 'next/image'
 import DropdownMenu from './DropdownMenu'
 import { Button } from '@chakra-ui/react'
-import DropdownMenu2 from './DropdownMenu2'
 import Link from 'next/link'
 import { MdOutlineMenu } from 'react-icons/md'
 
-const Navbar = () => {
+const MobileNavbar = () => {
 
     const nav_links = [
         {
@@ -41,7 +40,7 @@ const Navbar = () => {
     ]
 
     return (
-        <header className="bg-white sticky top-0 z-50">
+        <header className="bg-white sticky top-0 z-50 w-full lg:hidden">
             <div className="flex items-center justify-between lg:px-12 md:px-6 px-4 lg:py-2 md:py-2">
                 <Link href="/">
                     <Image src={logo} alt="logo" width={150} height={50} className='lg:w-[150px] lg:h-[50px] w-[120px]' />
@@ -58,13 +57,13 @@ const Navbar = () => {
 
             </div>
 
-            <div className="lg:flex justify-center items-center gap-6 border-t-[1.5px] py-2 hidden">
+            <div className="lg:flex lg:justify-center lg:items-center gap-6 border-t-[1.5px] py-2 lg:static absolute bg-white top-[2.8rem] lg:h-auto h-[93.5vh] lg:flex-row flex-col flex md:hidden w-full">
                 {
                     nav_links.map(link => (
                         <>
                             {
                                 link.sublinks ? (
-                                    <DropdownMenu2 title={link.title} sub_items={link.sublinks} isUnderlined={link?.isUnderlined}/>
+                                    <MobileDropdownMenu2 title={link.title} sub_items={link.sublinks} isUnderlined={link?.isUnderlined}/>
                                 ) : ( 
                                     <Link href="/" className='text-[#151515] lg:px-none px-4'>{link.title}</Link>
                                 )
@@ -77,4 +76,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default MobileNavbar

@@ -11,6 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <title>Tobams group</title>
+      </head>
       <body>        
         <ChakraProvider>
           <Navbar/>
