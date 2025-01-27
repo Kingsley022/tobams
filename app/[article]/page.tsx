@@ -5,13 +5,16 @@ import Image from 'next/image';
 import empty_image from "../assets/images/empty-image.jpg";
 import Articles from '../components/Articles';
 
-interface Props {
-    params: {
-      article: string;
-    };
-  }
+type Params = Promise<{ article: string }>;
 
-const page = async ({ params: { article: id } }: Props) => {
+interface Props {
+  params: Params;
+}
+
+const page = async ({ params}: Props) => {
+
+  const { article: id } = await params;
+
 
     const fetchArticle = async ():Promise<Article> => {
         const res = await fetch(`https://dev.to/api/articles/${id}`, { next: { revalidate: 60 } });
