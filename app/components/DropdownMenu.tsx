@@ -1,4 +1,4 @@
-import { Button, Menu, MenuButton, MenuList, MenuItem, background } from '@chakra-ui/react'
+import { Button, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
 import React from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import { PiUserCircleThin } from 'react-icons/pi'
