@@ -3,13 +3,13 @@ import React, { useState } from "react";
 import SearchForm from "./SearchForm";
 import Articles from "./Articles";
 import { Article } from "./TrendingArticles";
-import DropdownMenu3 from "@/app/components/DropdownMenu3";
 
 const SearchNArticles = ({ articles }: { articles: Article[] }) => {
   const [newArticles, setNewArticles] = useState<Article[]>(articles); // Directly set the initial articles
   const [value, setValue] = useState("");
   const [filter, setFilter] = useState("all");
 
+  console.log(filter)
   // Search handler
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();

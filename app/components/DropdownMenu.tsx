@@ -1,7 +1,6 @@
 import { Button, Menu, MenuButton, MenuList, MenuItem, background } from '@chakra-ui/react'
 import React from 'react'
 import { BsChevronDown } from 'react-icons/bs'
-import { MdKeyboardArrowDown } from 'react-icons/md'
 import { PiUserCircleThin } from 'react-icons/pi'
 
 const DropdownMenu = () => {

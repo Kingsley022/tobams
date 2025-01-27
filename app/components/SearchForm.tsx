@@ -1,6 +1,5 @@
 "use client";
-
-import { Button, Input } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/react";
 import { CiSearch } from "react-icons/ci";
 
 interface Props {

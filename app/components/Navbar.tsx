@@ -5,7 +5,6 @@ import DropdownMenu from './DropdownMenu'
 import { Button } from '@chakra-ui/react'
 import DropdownMenu2 from './DropdownMenu2'
 import Link from 'next/link'
-import DropdownMenu3 from './DropdownMenu3'
 import { MdOutlineMenu } from 'react-icons/md'
 
 const Navbar = () => {

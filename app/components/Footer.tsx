@@ -46,12 +46,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {quickLinks.map(link => (
-          <div className="flex flex-col gap-4">
+        {quickLinks.map((link, index) => (
+          <div className="flex flex-col gap-4" key={index}>
             <h3 className="text-white font-semibold text-base">{link.title}</h3>
             <div className="flex flex-col gap-4">
-              {link.links.map(link => (
-                <span>{link}</span>
+              {link.links.map((link,index) => (
+                <span key={index}>{link}</span>
               ))}
             </div>
           </div>

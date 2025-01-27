@@ -1,10 +1,7 @@
-import { Button } from "@chakra-ui/react";
 import banner from "@/app/assets/images/banner.jpg"
 import Image from "next/image";
 import Subscription from "./components/Subscription";
-import Footer from "./components/Footer";
 import TrendingArticles from "./components/TrendingArticles";
-import DropdownMenu3 from "./components/DropdownMenu3";
 
 export default function Home() {
   return (
