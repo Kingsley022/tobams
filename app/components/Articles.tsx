@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Article } from './TrendingArticles';
 import ArticleCard from './ArticleCard';
-import { Skeleton, SkeletonText, SkeletonCircle } from '@chakra-ui/react';
+import { Skeleton, SkeletonText } from '@chakra-ui/react';
 
 interface Props {
   articles: Article[];
